@@ -58,7 +58,7 @@ M H Rakib, **Showkot Hossain**, Mosarrat Jahan, Upama Kabir
   <li>
     <p align="justify">
       <b>A Blockchain-Enabled Scalable Network Log Management System</b> <br>
-      <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan<, Upama Kabir <br>
+      <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan, Upama Kabir <br>
       <i>Journal of Computer Science</i>, 18(6), 496-508 (2022) <br>
       [<a href="https://doi.org/10.3844/jcssp.2022.496.508">DOI</a>] 
       [<a href="https://thescipub.com/abstract/10.3844/jcssp.2022.496.508" target="_blank">Paper</a>] 
@@ -69,7 +69,7 @@ M H Rakib, **Showkot Hossain**, Mosarrat Jahan, Upama Kabir
   <li>
     <p align="justify">
       <b>Towards Blockchain-Driven Network Log Management System</b> <br>
-      <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan<, Upama Kabir <br>
+      <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan, Upama Kabir <br>
       <i>2020 IEEE 8th International Conference on Smart City and Informatization (iSCI)</i>, Guangzhou, China, 2020, pp. 73-80 <br>
       [<a href="https://doi.org/10.1109/iSCI50694.2020.00019">DOI</a>] 
       [<a href="https://ieeexplore.ieee.org/document/9346310" target="_blank">Paper</a>] 

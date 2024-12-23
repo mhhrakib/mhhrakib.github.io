@@ -6,16 +6,16 @@
 
 main:
   - title: "About Me"
-    url: "/#about-me"
+    url: "/#-about-me"
 
   - title: "Publications"
-    url: "/#publications"
+    url: "/#-publications"
 
   - title: "Experiences"
-    url: "/#experiences"
+    url: "/#-experiences"
 
   - title: "Awards"
-    url: "/#awards"
+    url: "/#-awards"
 
   - title: "Projects"
-    url: "/#projects"
+    url: "/#-projects"
