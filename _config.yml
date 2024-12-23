@@ -22,9 +22,9 @@ repository               : "mhhrakib/mhhrakib.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Habibullah Rakib"
   pronouns         : # example: "she/her"  
-  bio              : "MS in CS student @CSU"
+  bio              : "MS in CS student & GTA @CSU"
   location         : "Fort Collins, CO, USA"
   employer         : # "Red Brick University"
   uri              : # URL
@@ -49,7 +49,7 @@ author:
   stackoverflow    : "8512919"    
 
   # Social media
-  bluesky          : "bsky.app" # Replace this with you Bluesky username
+  bluesky          : # "bsky.app" # Replace this with you Bluesky username
   facebook         : # Username
   flickr           : # Username
   foursquare       : # Username
