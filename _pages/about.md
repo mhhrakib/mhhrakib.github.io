@@ -36,11 +36,7 @@ I am currently pursuing my **M.S. in Computer Science** at Colorado State Univer
 
 ---
 
-<!-- # 🔥 News
-- *[Aug 2024]*: &nbsp;🎉🎉 Started my PhD in Computer Engineering at the University of Notre Dame, IN, USA. 
-- *[Mar 2024]*: &nbsp;🎉🎉 Selected for Research Assistant (RA) position at the Department of CSE, University of Notre Dame.  -->
-
-# 📝 Publications 
+## 📝 Publications 
 
 <!--
 <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
@@ -57,51 +53,34 @@ M H Rakib, **Showkot Hossain**, Mosarrat Jahan, Upama Kabir
 
 - [Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet](https://github.com), A, B, C, **CVPR 2020**
 -->
+
 <ul>
-  
-  <div class='paper-box'><div class='paper-box-image'><div><div class="badge">JCS '22</div><img src='images/SystemModel.jpg' alt="sym" width="100%"></div></div>
-  <div class='paper-box-text' markdown="1">
   <li>
     <p align="justify">
-    <b>A Blockchain-Enabled Scalable Network Log Management System</b> <br>
-    <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan, Upama Kabir <br>
-    Journal of Computer Science, 18(6), 496-508<br>
-    [<a href="https://doi.org/10.3844/jcssp.2022.496.508"> DOI </a>]
-    [<a href="https://thescipub.com/abstract/10.3844/jcssp.2022.496.508" target="\_blank"> Paper </a>]
-    [<a href="https://drive.google.com/file/d/1ykxrhZhHBFXapdSb2-AaCOgUlvxgFWET/view?usp=sharing"> Poster </a>]
-    <!-- [<a href="https://github.com/mhhrakib/log-bc" target="\_blank"> Code </a>] -->
-    <!-- [<a href="assets/jcssp.2022.496.508.txt" target="\_blank"> BibTex </a>] -->
+      <b>A Blockchain-Enabled Scalable Network Log Management System</b> <br>
+      <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan<, Upama Kabir <br>
+      <i>Journal of Computer Science</i>, 18(6), 496-508 (2022) <br>
+      [<a href="https://doi.org/10.3844/jcssp.2022.496.508">DOI</a>] 
+      [<a href="https://thescipub.com/abstract/10.3844/jcssp.2022.496.508" target="_blank">Paper</a>] 
+      [<a href="https://drive.google.com/file/d/1ykxrhZhHBFXapdSb2-AaCOgUlvxgFWET/view?usp=sharing">Poster</a>] 
     </p>
   </li>
-  </div>
-  </div>
 
-  <div class='paper-box'><div class='paper-box-image'><div><div class="badge">iSCI '20</div><img src='images/arc.png' alt="sym" width="100%"></div></div>
-  <div class='paper-box-text' markdown="1">
-   <li>
+  <li>
     <p align="justify">
-    <b>Towards Blockchain-Driven Network Log Management System</b> <br>
-    <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan, Upama Kabir <br>
-     2020 IEEE 8th International Conference on Smart City and Informatization (iSCI), Guangzhou, China, 2020, pp.
-73-80.<br>
-    [<a href="https://doi.org/10.1109/iSCI50694.2020.00019"> DOI </a>]
-    [<a href="https://ieeexplore.ieee.org/document/9346310" target="\_blank"> Paper </a>]
-    [<a href="https://www.youtube.com/watch?v=-qNZF6VylgQ" target="\_blank"> Presentation </a>]  
-    <!-- [<a href="https://github.com/mhhrakib/log-bc" target="\_blank"> Code </a>] -->
-    <!-- [<a href="assets/LogBC.txt" target="\_blank"> BibTex </a>]   -->
+      <b>Towards Blockchain-Driven Network Log Management System</b> <br>
+      <b>M H Rakib</b>, Showkot Hossain, Mosarrat Jahan<, Upama Kabir <br>
+      <i>2020 IEEE 8th International Conference on Smart City and Informatization (iSCI)</i>, Guangzhou, China, 2020, pp. 73-80 <br>
+      [<a href="https://doi.org/10.1109/iSCI50694.2020.00019">DOI</a>] 
+      [<a href="https://ieeexplore.ieee.org/document/9346310" target="_blank">Paper</a>] 
+      [<a href="https://www.youtube.com/watch?v=-qNZF6VylgQ" target="_blank">Presentation</a>] 
     </p>
   </li>
-  </div>
-  </div>
+</ul>
 
- </ul>
+---
 
-
-# 📖 Educations
-- *Aug 2024 - (present)*, PhD in Computer Engineering, University of Notre Dame, Notre Dame, IN 46556, USA. 
-- *Jan 2016 - Jan 2020*, Bachelor of Science (BSc) in Computer Science and Engineering, University of Dhaka, Dhaka 1000, Bangladesh.
-
-# 💻 Experiences
+## 💻 Experiences
 
 <ul>
   <li>
@@ -139,6 +118,21 @@ M H Rakib, **Showkot Hossain**, Mosarrat Jahan, Upama Kabir
     Technohaven Company Limited, Dhaka, Bangladesh
   </li>
 </ul>
+
+---
+
+## Projects
+
+### CyChain  
+**Blockchain-based Network Log Storage**  
+- Developed a secure, scalable system for real-time log storage using MultiChain and IPFS.  
+
+### EMR System  
+**Electronic Medical Records Platform**  
+- Designed a blockchain-based system for secure storage and permissioned sharing of patient health data.
+- [GitHub Repository](https://github.com/mhhrakib/emr)
+
+---
 
 ## Awards
 
