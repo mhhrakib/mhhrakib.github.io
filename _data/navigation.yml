@@ -6,7 +6,7 @@
 
 main:
   - title: "About Me"
-    url: "/#-about-me"
+    url: "/#about-me"
 
   - title: "Publications"
     url: "/#-publications"
@@ -15,7 +15,7 @@ main:
     url: "/#-experiences"
 
   - title: "Awards"
-    url: "/#-awards"
+    url: "/#awards"
 
   - title: "Projects"
-    url: "/#-projects"
+    url: "/#projects"
