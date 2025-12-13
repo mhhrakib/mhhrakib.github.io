@@ -1,41 +1,63 @@
 .list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .item {
     display: flex;
-    gap: 1rem;
-    align-items: baseline;
+    gap: 1.5rem;
+    align-items: flex-start;
 }
 
 .year {
     font-weight: 700;
-    color: var(--secondary);
-    font-size: 1rem;
+    color: var(--accent);
+    font-size: 1.1rem;
     min-width: 3rem;
+    padding-top: 0.2rem;
 }
 
 .content {
-    flex-grow: 1;
+    flex: 1;
 }
 
 .title {
+    font-size: 1.15rem;
     font-weight: 600;
     color: var(--foreground);
-    font-size: 1.1rem;
     margin-bottom: 0.25rem;
+    line-height: 1.4;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: var(--accent);
+    text-decoration: underline;
 }
 
 .authors {
     color: var(--secondary);
     font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.5;
 }
 
 .venue {
-    color: var(--accent);
-    font-style: italic;
+    color: var(--primary);
     font-size: 0.9rem;
-    margin-top: 0.25rem;
+    font-style: italic;
+    font-weight: 500;
+}
+
+@media (max-width: 640px) {
+    .item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
 }

@@ -1,23 +1,42 @@
 :root {
   --background: #ffffff;
-  --foreground: #1e293b; /* Slate 800 */
-  --primary: #0f172a; /* Slate 900 */
-  --secondary: #64748b; /* Slate 500 */
-  --accent: #2563eb; /* Blue 600 */
-  --muted: #f1f5f9; /* Slate 100 */
-  
+  --foreground: #1e293b;
+  /* Slate 800 */
+  --primary: #0f172a;
+  /* Slate 900 */
+  --secondary: #64748b;
+  /* Slate 500 */
+  --accent: #2563eb;
+  /* Blue 600 */
+  --muted: #f1f5f9;
+  /* Slate 100 */
+
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
+  --mobile-menu-bg: #ffffff;
+
   --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --max-width: 1024px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0f172a; /* Slate 900 */
-    --foreground: #f8fafc; /* Slate 50 */
-    --primary: #f1f5f9; /* Slate 100 */
-    --secondary: #94a3b8; /* Slate 400 */
-    --accent: #60a5fa; /* Blue 400 */
-    --muted: #1e293b; /* Slate 800 */
+    --background: #0f172a;
+    /* Slate 900 */
+    --foreground: #f8fafc;
+    /* Slate 50 */
+    --primary: #f1f5f9;
+    /* Slate 100 */
+    --secondary: #94a3b8;
+    /* Slate 400 */
+    --accent: #60a5fa;
+    /* Blue 400 */
+    --muted: #1e293b;
+    /* Slate 800 */
+
+    --header-bg: rgba(15, 23, 42, 0.9);
+    --card-bg: #1e293b;
+    --mobile-menu-bg: #1e293b;
   }
 }
 
@@ -54,7 +73,12 @@ a:hover {
   padding: 0 1rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--primary);
   line-height: 1.2;
   margin-bottom: 0.5em;
@@ -78,17 +102,49 @@ ul {
 }
 
 /* Utilities */
-.text-sm { font-size: 0.875rem; }
-.text-muted { color: var(--secondary); }
-.font-bold { font-weight: 700; }
-.flex { display: flex; }
-.items-center { align-items: center; }
-.justify-between { justify-content: space-between; }
-.gap-2 { gap: 0.5rem; }
-.gap-4 { gap: 1rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-4 { margin-top: 1rem; }
-.mb-4 { margin-bottom: 1rem; }
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-muted {
+  color: var(--secondary);
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
 
 /* Mobile Menu */
 .mobile-hidden {
@@ -99,6 +155,7 @@ ul {
   .mobile-hidden {
     display: none;
   }
+
   .desktop-hidden {
     display: none;
   }

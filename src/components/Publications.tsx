@@ -12,7 +12,15 @@ export default function Publications() {
                     <div key={index} className={styles.item}>
                         <div className={styles.year}>{pub.year}</div>
                         <div className={styles.content}>
-                            <div className={styles.title}>{pub.title}</div>
+                            <div className={styles.title}>
+                                {pub.link ? (
+                                    <a href={pub.link} target="_blank" rel="noopener noreferrer" className={styles.link}>
+                                        {pub.title}
+                                    </a>
+                                ) : (
+                                    pub.title
+                                )}
+                            </div>
                             <div className={styles.authors}>
                                 {pub.authors.split('MH Rakib').map((part, i, arr) => (
                                     <span key={i}>
