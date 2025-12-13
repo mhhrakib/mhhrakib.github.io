@@ -1,0 +1,35 @@
+.section {
+    padding: 5rem 0;
+    border-bottom: 1px solid var(--muted);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.title::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 3rem;
+    height: 4px;
+    background-color: var(--accent);
+    border-radius: 2px;
+}

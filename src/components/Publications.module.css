@@ -1,0 +1,41 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item {
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+.year {
+    font-weight: 700;
+    color: var(--secondary);
+    font-size: 1rem;
+    min-width: 3rem;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.title {
+    font-weight: 600;
+    color: var(--foreground);
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.authors {
+    color: var(--secondary);
+    font-size: 0.95rem;
+}
+
+.venue {
+    color: var(--accent);
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}

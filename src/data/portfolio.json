@@ -1,0 +1,117 @@
+{
+  "personal": {
+    "name": "Habibullah Rakib",
+    "title": "Software Engineer | CS Graduate Student",
+    "email": "habibullah.rakib@colostate.edu",
+    "location": "Fort Collins, CO",
+    "social": {
+      "github": "https://github.com/mhhrakib",
+      "linkedin": "https://linkedin.com/in/mhhrakib",
+      "scholar": "https://scholar.google.com/citations?user=uYw_bZgAAAAJ"
+    }
+  },
+  "education": [
+    {
+      "degree": "M.S. in Computer Science",
+      "institution": "Colorado State University",
+      "location": "Fort Collins, CO",
+      "period": "Aug 2024 -- May 2026",
+      "details": "GPA: 4.0/4.0. Relevant coursework: Machine Learning, NLP, AI for Software Engineering, Big Data."
+    },
+    {
+      "degree": "B.Sc. in Computer Science and Engineering",
+      "institution": "University of Dhaka",
+      "location": "Dhaka, Bangladesh",
+      "period": "Jan 2016 -- Jan 2020",
+      "details": ""
+    }
+  ],
+  "experience": [
+    {
+      "role": "Graduate Research Assistant",
+      "company": "Colorado State University",
+      "location": "Fort Collins, CO",
+      "period": "May 2025 -- Present",
+      "description": [
+        "Investigating uncertainty quantification methods in deep neural networks to improve model reliability.",
+        "Evaluating Monte Carlo Dropout strategies, calibration methods, and weight-uncertainty relationships."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Karnaphuli Gas Distribution Company Limited",
+      "location": "Chattogram, Bangladesh",
+      "period": "Aug 2022 -- Jul 2024",
+      "description": [
+        "Architected CI/CD pipeline using GitHub Actions, reducing deployment time from 15 minutes to 30 seconds.",
+        "Optimized customer billing portal serving 100K+ users, improving response time by 60%.",
+        "Developed a full-stack vehicle requisition system using Spring Boot.",
+        "Engineered automated MIS and complaint management modules."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "company": "Dohatec New Media",
+      "location": "Dhaka, Bangladesh",
+      "period": "Dec 2021 -- Aug 2022",
+      "description": [
+        "Built integrated construction permit management system serving 100+ daily applications.",
+        "Implemented digital signature verification and integrated payment gateway."
+      ]
+    },
+    {
+      "role": "Blockchain Developer Intern",
+      "company": "Technohaven Company Limited",
+      "location": "Dhaka, Bangladesh",
+      "period": "Jun 2020 -- Aug 2020",
+      "description": [
+        "Designed EMR system using Hyperledger Fabric and Node.js for secure patient data sharing."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Quiz Whiz",
+      "link": "https://quiz-whiz-mu.vercel.app",
+      "description": "AI-Powered Real-Time Quiz Platform using Next.js, React, and Firebase. Integrated Google's Genkit AI.",
+      "tech": ["Next.js", "Firebase", "Genkit", "React"]
+    },
+    {
+      "title": "Multi-document Text Summarization",
+      "link": "https://github.com/mhhrakib/multi-document-summarizer",
+      "description": "Abstractive multi-document summarization pipeline leveraging Pegasus, BART, and LED models.",
+      "tech": ["Python", "PyTorch", "HuggingFace", "FastAPI"]
+    },
+    {
+      "title": "CyChain",
+      "link": "https://thescipub.com/abstract/jcssp.2022.496.508",
+      "description": "Blockchain-based network log storage using MultiChain and IPFS for real-time log collection.",
+      "tech": ["Blockchain", "Python", "IPFS", "Flask"]
+    }
+  ],
+  "publications": [
+    {
+      "title": "Contribution History as a Key Feature in OSS Task Recommendation: an LLM-Based Empirical Study",
+      "authors": "Md Abdul Hannan, MH Rakib, Khondaker Masfiq Reza, and Fabio Santos",
+      "venue": "ACM/IEEE ESEM'25",
+      "year": "2025"
+    },
+    {
+      "title": "A Blockchain-Enabled Scalable Network Log Management System",
+      "authors": "MH Rakib, Showkot Hossain, Mosarrat Jahan, and Upama Kabir",
+      "venue": "Journal of Computer Science",
+      "year": "2022"
+    },
+    {
+      "title": "Towards Blockchain-Driven Network Log Management System",
+      "authors": "MH Rakib, Showkot Hossain, Mosarrat Jahan, Upama Kabir",
+      "venue": "iSCI",
+      "year": "2020"
+    }
+  ],
+  "skills": {
+    "languages": ["Python", "Java", "C/C++", "JavaScript", "SQL"],
+    "frameworks": ["Spring Boot", "React", "Next.js", "Flask", "Django"],
+    "tools": ["Git", "Docker", "GitHub Actions", "Linux"]
+  }
+}

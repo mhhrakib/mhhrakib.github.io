@@ -1,0 +1,51 @@
+.item {
+    margin-bottom: 3rem;
+    border-left: 2px solid var(--muted);
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+.header {
+    margin-bottom: 0.5rem;
+}
+
+.role {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+.company {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.meta {
+    font-size: 0.875rem;
+    color: var(--secondary);
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    list-style-type: disc;
+    padding-left: 1.25rem;
+}
+
+.description li {
+    margin-bottom: 0.5rem;
+}
