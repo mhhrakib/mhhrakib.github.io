@@ -14,6 +14,7 @@ export default function Header() {
         { name: 'Experience', path: '/#experience' },
         { name: 'Projects', path: '/#projects' },
         { name: 'Publications', path: '/#publications' },
+        { name: 'Awards', path: '/#awards' },
     ];
 
     return (

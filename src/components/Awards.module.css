@@ -1,0 +1,36 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.item {
+    border-left: 2px solid var(--accent);
+    padding-left: 1rem;
+}
+
+.title {
+    font-weight: 600;
+    color: var(--foreground);
+    font-size: 1.1rem;
+}
+
+.issuer {
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.meta {
+    font-size: 0.875rem;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.details {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}

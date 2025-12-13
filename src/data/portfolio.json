@@ -3,7 +3,7 @@
     "name": "Habibullah Rakib",
     "title": "Software Engineer | CS Graduate Student",
     "email": "habibullah.rakib@colostate.edu",
-    "location": "Fort Collins, CO",
+    "location": "Fort Collins, CO, USA",
     "social": {
       "github": "https://github.com/mhhrakib",
       "linkedin": "https://linkedin.com/in/mhhrakib",
@@ -14,7 +14,7 @@
     {
       "degree": "M.S. in Computer Science",
       "institution": "Colorado State University",
-      "location": "Fort Collins, CO",
+      "location": "Fort Collins, CO, USA",
       "period": "Aug 2024 -- May 2026",
       "details": "GPA: 4.0/4.0. Relevant coursework: Machine Learning, NLP, AI for Software Engineering, Big Data."
     },
@@ -30,11 +30,22 @@
     {
       "role": "Graduate Research Assistant",
       "company": "Colorado State University",
-      "location": "Fort Collins, CO",
-      "period": "May 2025 -- Present",
+      "location": "Fort Collins, CO, USA",
+      "period": "May 2025 -- Aug 2025",
       "description": [
         "Investigating uncertainty quantification methods in deep neural networks to improve model reliability.",
         "Evaluating Monte Carlo Dropout strategies, calibration methods, and weight-uncertainty relationships."
+      ]
+    },
+    {
+      "role": "Graduate Teaching Assistant",
+      "company": "Colorado State University",
+      "location": "Fort Collins, CO, USA",
+      "period": "Aug 2024 -- Present",
+      "description": [
+        "Course: CS320 - Algorithms Theory and Practice",
+        "Conducting theoretical and practical sessions to reinforce algorithm design and analysis concepts.",
+        "Assisting students during office hours and grading assignments/exams."
       ]
     },
     {
@@ -105,7 +116,7 @@
     {
       "title": "Towards Blockchain-Driven Network Log Management System",
       "authors": "MH Rakib, Showkot Hossain, Mosarrat Jahan, Upama Kabir",
-      "venue": "iSCI",
+      "venue": "IEEE 8th International Conference on Smart City and Informatization (iSCI)",
       "year": "2020"
     }
   ],
@@ -113,5 +124,25 @@
     "languages": ["Python", "Java", "C/C++", "JavaScript", "SQL"],
     "frameworks": ["Spring Boot", "React", "Next.js", "Flask", "Django"],
     "tools": ["Git", "Docker", "GitHub Actions", "Linux"]
-  }
+  },
+  "awards": [
+    {
+      "title": "ICT Innovation Fund Recipient",
+      "issuer": "ICT Division, Government of Bangladesh",
+      "year": "2021",
+      "details": "Grant of 5,000 USD for innovative project development."
+    },
+    {
+      "title": "Award of Merit",
+      "issuer": "International Blockchain Olympiad",
+      "year": "2020",
+      "details": "Part of team DU_Hyperledger."
+    },
+    {
+      "title": "Problem Solving (Intermediate) Certification",
+      "issuer": "HackerRank",
+      "year": "2020",
+      "details": ""
+    }
+  ]
 }

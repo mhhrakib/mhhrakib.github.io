@@ -1,3 +1,4 @@
+import { Calendar, MapPin } from 'lucide-react';
 import portfolioData from '@/data/portfolio.json';
 import Section from './Section';
 import styles from './Experience.module.css';
@@ -14,9 +15,8 @@ export default function Experience() {
                         <div className={styles.company}>{job.company}</div>
                     </div>
                     <div className={styles.meta}>
-                        <span>{job.period}</span>
-                        <span>•</span>
-                        <span>{job.location}</span>
+                        <span className={styles.metaIcon}><Calendar size={14} /> {job.period}</span>
+                        <span className={styles.metaIcon}><MapPin size={14} /> {job.location}</span>
                     </div>
                     {job.description && (
                         <ul className={styles.description}>
