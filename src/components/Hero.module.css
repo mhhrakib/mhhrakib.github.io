@@ -48,7 +48,7 @@
 
 .primary {
     background-color: var(--primary);
-    color: white;
+    color: var(--background);
 }
 
 .primary:hover {
