@@ -12,7 +12,46 @@
     align-items: center;
 }
 
-/* ... existing code ... */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.desktopNav {
+    display: none;
+    gap: 1.5rem;
+}
+
+.desktopNav a {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.desktopNav a:hover {
+    color: var(--accent);
+}
+
+.mobileToggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--primary);
+}
 
 .mobileMenu {
     position: absolute;
