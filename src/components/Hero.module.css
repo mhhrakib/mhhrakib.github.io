@@ -47,8 +47,8 @@
 }
 
 .primary {
-    background-color: var(--primary);
-    color: var(--background);
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-primary-text);
 }
 
 .primary:hover {
