@@ -87,7 +87,7 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ stats }) => {
             <CircularProgress
                 label="Words"
                 percentage={stats.words}
-                current={Math.round((stats.words / 100) * 77800)} // Approximation for display
+                current={(stats.words / 100) * 77800}
                 total={77800} // Total words constant from original app
                 unit="words"
             />
@@ -95,7 +95,7 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ stats }) => {
             <CircularProgress
                 label="Chars"
                 percentage={stats.chars}
-                current={Math.round((stats.chars / 100) * 330709)} // Approximation for display
+                current={(stats.chars / 100) * 330709}
                 total={330709} // Total chars constant from original app
                 unit="chars"
             />
