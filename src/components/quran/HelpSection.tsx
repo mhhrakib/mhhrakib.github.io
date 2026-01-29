@@ -52,6 +52,14 @@ export const HelpSection: React.FC = () => {
                     </div>
 
                     <div className={styles.section}>
+                        <h4 className={styles.sectionTitle}>How are stats calculated?</h4>
+                        <p>
+                            Progress is calculated based on the <strong>total number of words and characters</strong> in the verses you complete.
+                            Since verses vary in length (e.g., Ayatul Kursi vs. a short verse), this gives a much more accurate reflection of your effort than just counting verses.
+                        </p>
+                    </div>
+
+                    <div className={styles.section}>
                         <h4 className={styles.sectionTitle}>Data & Privacy</h4>
                         <p>
                             All your progress is saved <strong>locally on your device</strong> (in your browser).

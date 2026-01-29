@@ -11,14 +11,21 @@ import { ProgressMode } from './types';
 
 export const QuranCalculator: React.FC = () => {
     const { data: quranData, loading, error } = useQuranData();
-    const { progress, updateProgress, getOverallStats, importProgress } = useQuranProgress(quranData);
+    const { progress, updateProgress, getOverallStats, importProgress, resetProgress } = useQuranProgress(quranData);
     const [mode, setMode] = useState<ProgressMode>('memorization');
+    const [searchQuery, setSearchQuery] = useState('');
 
     if (loading) return <div className={styles.loading}>Loading Quran Data...</div>;
     if (error) return <div className={styles.error}>Error: {error}</div>;
     if (!quranData) return null;
 
     const stats = getOverallStats(mode);
+
+    const filteredSurahs = quranData.filter(surah =>
+        surah.transliteration.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        surah.name.includes(searchQuery) ||
+        surah.id.toString().includes(searchQuery)
+    );
 
     return (
         <div className={styles.container}>
@@ -27,7 +34,7 @@ export const QuranCalculator: React.FC = () => {
                 <p className={styles.subtitle}>Track your {mode} journey</p>
             </header>
 
-            <div className={styles.controls}>
+            <div className={styles.controls} style={{ flexWrap: 'wrap' }}>
                 <div className={styles.modeToggle}>
                     <button
                         className={`${styles.modeButton} ${mode === 'memorization' ? styles.modeActive : ''}`}
@@ -42,6 +49,16 @@ export const QuranCalculator: React.FC = () => {
                         Reading
                     </button>
                 </div>
+
+                <input
+                    type="text"
+                    placeholder="Search Surah..."
+                    className={styles.modeButton} // Reusing basic style for now, can customize
+                    style={{ background: '#fff', border: '1px solid #e2e8f0', cursor: 'text' }}
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                />
+
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                     <button className={styles.modeButton} onClick={() => {
                         const blob = new Blob([JSON.stringify(progress)], { type: 'application/json' });
@@ -77,6 +94,13 @@ export const QuranCalculator: React.FC = () => {
                             }}
                         />
                     </label>
+                    <button
+                        className={styles.modeButton}
+                        style={{ color: '#e53e3e', borderColor: '#e53e3e' }}
+                        onClick={() => resetProgress(mode)}
+                    >
+                        Reset
+                    </button>
                 </div>
             </div>
 
@@ -84,7 +108,7 @@ export const QuranCalculator: React.FC = () => {
             <StatsOverview stats={stats} />
 
             <div className={styles.surahGrid}>
-                {quranData.map((surah) => (
+                {filteredSurahs.map((surah) => (
                     <SurahCard
                         key={surah.id}
                         surah={surah}

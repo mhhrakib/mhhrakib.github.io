@@ -51,7 +51,8 @@
     font-family: 'Amiri', serif;
     /* Ensure arabic font is available or fallback */
     color: var(--primary-color, #0d7a5f);
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    line-height: 1.2;
 }
 
 .controls {
