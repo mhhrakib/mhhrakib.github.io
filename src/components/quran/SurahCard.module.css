@@ -96,6 +96,13 @@
     margin-bottom: 0.75rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    .progressBarContainer {
+        background: rgba(255, 255, 255, 0.1);
+        /* Lighter gray for visibility */
+    }
+}
+
 .segment {
     height: 100%;
 }
