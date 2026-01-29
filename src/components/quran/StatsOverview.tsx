@@ -34,7 +34,7 @@ const CircularProgress: React.FC<StatProps> = ({ label, percentage, current, tot
                     />
                 </svg>
                 <div className={styles.progressText}>
-                    <span className={styles.progressPercent}>{percentage.toFixed(1)}%</span>
+                    <span className={styles.progressPercent}>{percentage.toFixed(2)}%</span>
                     <span className={styles.progressLabel}>{label}</span>
                 </div>
             </div>
@@ -77,7 +77,7 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ stats }) => {
                         />
                     </svg>
                     <div className={styles.progressText}>
-                        <span className={styles.progressPercent}>{stats.totalAvg.toFixed(1)}%</span>
+                        <span className={styles.progressPercent}>{stats.totalAvg.toFixed(2)}%</span>
                     </div>
                 </div>
                 <h3>Overall Progress</h3>

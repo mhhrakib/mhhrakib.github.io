@@ -11,7 +11,7 @@ import { ProgressMode } from './types';
 
 export const QuranCalculator: React.FC = () => {
     const { data: quranData, loading, error } = useQuranData();
-    const { progress, updateProgress, getOverallStats } = useQuranProgress(quranData);
+    const { progress, updateProgress, getOverallStats, importProgress } = useQuranProgress(quranData);
     const [mode, setMode] = useState<ProgressMode>('memorization');
 
     if (loading) return <div className={styles.loading}>Loading Quran Data...</div>;
@@ -41,6 +41,42 @@ export const QuranCalculator: React.FC = () => {
                     >
                         Reading
                     </button>
+                </div>
+                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                    <button className={styles.modeButton} onClick={() => {
+                        const blob = new Blob([JSON.stringify(progress)], { type: 'application/json' });
+                        const url = URL.createObjectURL(blob);
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = `quran-progress-${new Date().toISOString().split('T')[0]}.json`;
+                        a.click();
+                        URL.revokeObjectURL(url);
+                    }}>
+                        Export
+                    </button>
+                    <label className={styles.modeButton} style={{ cursor: 'pointer' }}>
+                        Import
+                        <input
+                            type="file"
+                            accept=".json"
+                            style={{ display: 'none' }}
+                            onChange={(e) => {
+                                const file = e.target.files?.[0];
+                                if (!file) return;
+                                const reader = new FileReader();
+                                reader.onload = (ev) => {
+                                    try {
+                                        const data = JSON.parse(ev.target?.result as string);
+                                        importProgress(data);
+                                        alert('Progress imported successfully!');
+                                    } catch (err) {
+                                        alert('Failed to import file');
+                                    }
+                                };
+                                reader.readAsText(file);
+                            }}
+                        />
+                    </label>
                 </div>
             </div>
 

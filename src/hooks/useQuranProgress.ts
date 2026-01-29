@@ -121,5 +121,9 @@ export const useQuranProgress = (quranData: QuranData | null) => {
         };
     };
 
-    return { progress, updateProgress, getOverallStats };
+    const importProgress = (data: ProgressState) => {
+        setProgress(data);
+    };
+
+    return { progress, updateProgress, getOverallStats, importProgress };
 };

@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import styles from './SurahCard.module.css';
-import { Surah } from './types.ts';
+import { Surah } from './types';
 import { parseAyahInput } from '../../hooks/useQuranProgress';
 
 interface SurahCardProps {
@@ -58,6 +58,8 @@ export const SurahCard: React.FC<SurahCardProps> = ({ surah, progressValue, onUp
         onUpdate(e.target.checked ? 'F' : '');
     };
 
+    const percent = segments.reduce((acc, seg) => acc + (seg.completed ? seg.width : 0), 0);
+
     return (
         <div className={styles.card}>
             <div className={styles.header}>
@@ -69,6 +71,7 @@ export const SurahCard: React.FC<SurahCardProps> = ({ surah, progressValue, onUp
                     </div>
                 </div>
                 <div className={styles.controls}>
+                    <span className={styles.badge}>{Math.round(percent)}%</span>
                     <span className={styles.badge}>{surah.total_verses} v</span>
                     <input
                         type="checkbox"
