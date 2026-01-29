@@ -125,5 +125,11 @@ export const useQuranProgress = (quranData: QuranData | null) => {
         setProgress(data);
     };
 
-    return { progress, updateProgress, getOverallStats, importProgress };
+    const resetProgress = (mode: ProgressMode) => {
+        if (confirm(`Are you sure you want to reset all your ${mode} progress? This cannot be undone.`)) {
+            setProgress(prev => ({ ...prev, [mode]: {} }));
+        }
+    };
+
+    return { progress, updateProgress, getOverallStats, importProgress, resetProgress };
 };
