@@ -91,15 +91,13 @@ export const QuranCalculator: React.FC = () => {
                 <input
                     type="text"
                     placeholder="Search Surah..."
-                    className={styles.modeButton} // Reusing basic style for now, can customize
-                    style={{ background: '#fff', border: '1px solid #e2e8f0', cursor: 'text' }}
+                    className={styles.searchInput}
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
 
                 <select
-                    className={styles.modeButton}
-                    style={{ background: '#fff', border: '1px solid #e2e8f0', cursor: 'pointer', appearance: 'auto' }}
+                    className={styles.sortSelect}
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as SortOption)}
                 >

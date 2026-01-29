@@ -36,6 +36,16 @@
     fill: none;
     stroke: var(--muted);
     stroke-width: 8;
+    opacity: 0.3;
+    /* Make it translucent so it's visible against same-color background? No, wait. */
+}
+
+/* Explicit dark mode override for better visibility */
+@media (prefers-color-scheme: dark) {
+    .progressBg {
+        stroke: rgba(255, 255, 255, 0.1);
+        /* Visible light gray track */
+    }
 }
 
 .progressFore {
