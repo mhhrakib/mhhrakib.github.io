@@ -19,7 +19,13 @@
 
 .links {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.separator {
+    color: var(--text-secondary, #718096);
+    opacity: 0.5;
 }
 
 .links a:hover {

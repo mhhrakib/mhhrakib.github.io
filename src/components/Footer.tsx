@@ -20,6 +20,10 @@ export default function Footer() {
                     <Link href={portfolioData.personal.social.scholar} target="_blank" rel="noopener noreferrer">
                         Scholar
                     </Link>
+                    <span className={styles.separator}>•</span>
+                    <Link href="/quran-memorization-calculator">
+                        Quran Tracker
+                    </Link>
                 </div>
             </div>
         </footer>
