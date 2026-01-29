@@ -1,3 +1,4 @@
+/* QuranCalculator.module.css */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -13,11 +14,13 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--primary);
+    /* Adapts to dark mode (Slate 900 -> Slate 100) */
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
     color: var(--secondary);
+    /* Adapts to dark mode (Slate 500 -> Slate 400) */
 }
 
 .controls {
@@ -31,6 +34,7 @@
 .modeToggle {
     display: flex;
     background: var(--muted);
+    /* Light: Slate 100, Dark: Slate 800 */
     padding: 0.25rem;
     border-radius: 999px;
     gap: 0.25rem;
@@ -41,7 +45,7 @@
     border-radius: 999px;
     border: none;
     background: transparent;
-    color: var(--primary);
+    color: var(--secondary);
     font-weight: 600;
     font-size: 0.95rem;
     cursor: pointer;
@@ -51,10 +55,27 @@
     justify-content: center;
 }
 
+.modeButton:hover {
+    color: var(--primary);
+}
+
 .modeActive {
-    background: var(--bg-card, #ffffff);
-    color: var(--primary-color, #0d7a5f);
+    background: var(--card-bg);
+    /* Light: White, Dark: Slate 800 */
+    color: #0d7a5f;
+    /* Quran Green */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode adjustment for active button */
+@media (prefers-color-scheme: dark) {
+    .modeActive {
+        color: #34d399;
+        /* Lighter Green for dark mode */
+        background: var(--secondary);
+        /* Slightly lighter than card bg */
+        color: #fff;
+    }
 }
 
 .surahGrid {
@@ -66,7 +87,7 @@
 .loading {
     text-align: center;
     padding: 4rem;
-    color: var(--text-secondary);
+    color: var(--secondary);
     font-size: 1.2rem;
 }
 
@@ -83,7 +104,7 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background: var(--primary-color, #0d7a5f);
+    background: #0d7a5f;
     color: white;
     border: none;
     cursor: pointer;

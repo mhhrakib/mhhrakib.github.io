@@ -1,3 +1,4 @@
+/* StatsOverview.module.css */
 .statsContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -6,7 +7,7 @@
 }
 
 .statCard {
-    background: var(--bg-card, #ffffff);
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -15,7 +16,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 1px solid var(--border-color, #e2e8f0);
+    border: 1px solid var(--muted);
 }
 
 .progressCircle {
@@ -33,16 +34,23 @@
 
 .progressBg {
     fill: none;
-    stroke: var(--bg-secondary, #e2e8f0);
+    stroke: var(--muted);
     stroke-width: 8;
 }
 
 .progressFore {
     fill: none;
-    stroke: var(--primary-color, #0d7a5f);
+    stroke: #0d7a5f;
     stroke-width: 8;
     stroke-linecap: round;
     transition: stroke-dasharray 0.5s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    .progressFore {
+        stroke: #34d399;
+        /* Lighter green */
+    }
 }
 
 .progressText {
@@ -57,8 +65,9 @@
 
 .progressPercent {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary);
+    font-weight: 700;
+    color: var(--foreground);
+    /* Essential for dark mode (white) */
 }
 
 .progressLabel {
@@ -79,5 +88,5 @@
 
 .detailValue {
     font-weight: 600;
-    color: var(--primary);
+    color: var(--foreground);
 }
