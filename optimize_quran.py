@@ -6,10 +6,8 @@ INPUT_FILE = 'public/quran-simple.json'
 OUTPUT_FILE = 'public/quran-optimized.json'
 
 def count_words_chars(text):
-    # Basic word/char counting logic consistent with previous verification
-    # Using strict whitespace splitting for words
+    # Basic word/char counting logic
     words = len(text.strip().split())
-    # Counting non-whitespace chars
     chars = len(text.replace(' ', '').replace('\n', ''))
     return [words, chars]
 
@@ -24,59 +22,44 @@ def optimize_data():
 
     optimized_surahs = []
     
-    # Check structure (handle if it's wrapped in 'data' key or list)
-    # Based on previous context, structure seems to be a list of surahs
-    # or { "surahs": [...] } depending on source. Let's inspect slightly.
-    # Assuming standard simple-quran format: {"code":..., "status":..., "data": { "surahs": [...] } } or just list.
-    # I'll check common patterns.
+    # Structure is a list of surahs
+    # [ { "id": 1, "verses": [...] }, ... ]
     
-    surahs_list = []
-    if isinstance(data, list):
-        surahs_list = data
-    elif isinstance(data, dict):
-        if 'surahs' in data:
-            surahs_list = data['surahs']
-        elif 'data' in data and 'surahs' in data['data']:
-            surahs_list = data['data']['surahs']
-        else:
-            # Fallback for simple raw list wrapped in dict?
-            pass
+    surahs_list = data
+    if isinstance(data, dict) and 'surahs' in data:
+         surahs_list = data['surahs']
 
     print(f"Processing {len(surahs_list)} Surahs...")
 
     for surah in surahs_list:
-        surah_id = surah.get('number')
+        # Match keys from verified file content
+        surah_id = surah.get('id') or surah.get('number')
         name_ar = surah.get('name')
-        name_en = surah.get('englishName')
-        transliteration = surah.get('englishNameTranslation') # Usually 'englishName' is transliteration in some APIs, let's check
-        # Actually in quran-simple.json from API:
-        # name: "سُورَةُ ٱلْفَاتِحَةِ"
-        # englishName: "Al-Fatiha"
-        # englishNameTranslation: "The Opening"
+        # "transliteration" is present in file
+        transliteration = surah.get('transliteration') or surah.get('englishName')
+        # "translation" might be missing, use empty string if not found
+        translation = surah.get('translation') or surah.get('englishNameTranslation') or ""
         
-        # We want transliteration for search ("Al-Fatiha") and Arabic name.
-        
+        verses_list = surah.get('verses') or surah.get('ayahs') or []
+
         verses_stats = []
-        for ayah in surah.get('ayahs', []):
+        for ayah in verses_list:
             text = ayah.get('text', '')
-            # Handle Basmala logic if needed? 
-            # Usually quran-simple includes/excludes basmala consistently. 
-            # We just count what's in the text.
             stats = count_words_chars(text)
             verses_stats.append(stats)
 
         optimized_surahs.append({
             "id": surah_id,
             "name": name_ar,
-            "transliteration": name_en, # Using English Name as transliteration
-            "translation": transliteration, # The meaning
+            "transliteration": transliteration, 
+            "translation": translation, 
             "total_verses": len(verses_stats),
             "verses": verses_stats # List of [words, chars]
         })
 
     print(f"Saving optimized data to {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as f:
-        json.dump(optimized_surahs, f, ensure_ascii=False, separators=(',', ':')) # Minify with separators
+        json.dump(optimized_surahs, f, ensure_ascii=False, separators=(',', ':'))
 
     # Stats
     orig_size = os.path.getsize(INPUT_FILE) / 1024
