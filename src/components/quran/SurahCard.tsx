@@ -50,8 +50,17 @@ export const SurahCard: React.FC<SurahCardProps> = ({ surah, progressValue, onUp
 
     }, [progressValue, surah.total_verses, isCompleted]);
 
+    const completedAyahsCount = useMemo(() => {
+        if (progressValue === 'F') return surah.total_verses;
+        return parseAyahInput(progressValue, surah.total_verses).size;
+    }, [progressValue, surah.total_verses]);
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        onUpdate(e.target.value);
+        const val = e.target.value;
+        // Allow digits, commas, hyphens, spaces, and 'f'/'F'.
+        if (/^[0-9\-\,\sFf]*$/.test(val)) {
+            onUpdate(val);
+        }
     };
 
     const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -71,8 +80,16 @@ export const SurahCard: React.FC<SurahCardProps> = ({ surah, progressValue, onUp
                     </div>
                 </div>
                 <div className={styles.controls}>
-                    <span className={styles.badge}>{Math.round(percent)}%</span>
-                    <span className={styles.badge}>{surah.total_verses} v</span>
+                    <span
+                        className={styles.badge}
+                        title="Based on avg of words & chars, so this % might differ from ayah count %."
+                        style={{ cursor: 'help' }}
+                    >
+                        {Math.round(percent)}%
+                    </span>
+                    <span className={styles.badge}>
+                        {completedAyahsCount} / {surah.total_verses}
+                    </span>
                     <input
                         type="checkbox"
                         className={styles.checkbox}
