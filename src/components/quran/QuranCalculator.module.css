@@ -57,25 +57,45 @@
 
 .modeButton:hover {
     color: var(--primary);
+    background: var(--muted);
 }
 
 .modeActive {
-    background: var(--card-bg);
-    /* Light: White, Dark: Slate 800 */
-    color: #0d7a5f;
-    /* Quran Green */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #0d7a5f !important;
+    /* Force Green background */
+    color: #ffffff !important;
+    /* Force White text */
+    box-shadow: 0 4px 6px rgba(13, 122, 95, 0.3);
 }
 
-/* Dark mode adjustment for active button */
 @media (prefers-color-scheme: dark) {
     .modeActive {
-        color: #34d399;
-        /* Lighter Green for dark mode */
-        background: var(--secondary);
-        /* Slightly lighter than card bg */
-        color: #fff;
+        background: #34d399 !important;
+        /* Lighter Green */
+        color: #0f172a !important;
+        /* Dark text for contrast against light green */
     }
+}
+
+.searchInput,
+.sortSelect {
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    border: 1px solid var(--muted);
+    background: var(--card-bg);
+    /* Matches card bg */
+    color: var(--foreground);
+    /* Adapts to dark mode */
+    font-weight: 500;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus,
+.sortSelect:focus {
+    border-color: #0d7a5f;
+    box-shadow: 0 0 0 2px rgba(13, 122, 95, 0.1);
 }
 
 .surahGrid {
