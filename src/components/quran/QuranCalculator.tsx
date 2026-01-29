@@ -3,17 +3,20 @@
 import React, { useState } from 'react';
 import styles from './QuranCalculator.module.css';
 import { useQuranData } from '../../hooks/useQuranData';
-import { useQuranProgress } from '../../hooks/useQuranProgress';
+import { useQuranProgress, parseAyahInput } from '../../hooks/useQuranProgress';
 import { HelpSection } from './HelpSection';
 import { StatsOverview } from './StatsOverview';
 import { SurahCard } from './SurahCard';
 import { ProgressMode } from './types';
+
+type SortOption = 'default' | 'progress-desc' | 'progress-asc';
 
 export const QuranCalculator: React.FC = () => {
     const { data: quranData, loading, error } = useQuranData();
     const { progress, updateProgress, getOverallStats, importProgress, resetProgress } = useQuranProgress(quranData);
     const [mode, setMode] = useState<ProgressMode>('memorization');
     const [searchQuery, setSearchQuery] = useState('');
+    const [sortBy, setSortBy] = useState<SortOption>('default');
 
     if (loading) return <div className={styles.loading}>Loading Quran Data...</div>;
     if (error) return <div className={styles.error}>Error: {error}</div>;
@@ -21,11 +24,31 @@ export const QuranCalculator: React.FC = () => {
 
     const stats = getOverallStats(mode);
 
-    const filteredSurahs = quranData.filter(surah =>
-        surah.transliteration.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        surah.name.includes(searchQuery) ||
-        surah.id.toString().includes(searchQuery)
-    );
+    // Helper to get completion %
+    const getProgressPct = (surahId: number, totalVerses: number) => {
+        const val = progress[mode][surahId] || '';
+        if (!val) return 0;
+        if (val === 'F') return 100;
+        const completed = parseAyahInput(val, totalVerses);
+        return (completed.size / totalVerses) * 100;
+    };
+
+    const filteredSurahs = quranData
+        .filter(surah =>
+            surah.transliteration.toLowerCase().includes(searchQuery.toLowerCase()) ||
+            surah.name.includes(searchQuery) ||
+            surah.id.toString().includes(searchQuery)
+        )
+        .sort((a, b) => {
+            if (sortBy === 'default') return a.id - b.id;
+
+            const pctA = getProgressPct(a.id, a.total_verses);
+            const pctB = getProgressPct(b.id, b.total_verses);
+
+            if (sortBy === 'progress-desc') return pctB - pctA; // High to Low
+            if (sortBy === 'progress-asc') return pctA - pctB; // Low to High
+            return 0;
+        });
 
     return (
         <div className={styles.container}>
@@ -58,6 +81,17 @@ export const QuranCalculator: React.FC = () => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 />
+
+                <select
+                    className={styles.modeButton}
+                    style={{ background: '#fff', border: '1px solid #e2e8f0', cursor: 'pointer', appearance: 'auto' }}
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value as SortOption)}
+                >
+                    <option value="default">Sort: Default</option>
+                    <option value="progress-desc">Progress: High → Low</option>
+                    <option value="progress-asc">Progress: Low → High</option>
+                </select>
 
                 <div style={{ display: 'flex', gap: '0.5rem' }}>
                     <button className={styles.modeButton} onClick={() => {
