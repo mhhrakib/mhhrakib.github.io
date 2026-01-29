@@ -13,13 +13,11 @@
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--primary);
-    /* Uses global --primary which handles dark mode */
     margin-bottom: 0.5rem;
 }
 
 .subtitle {
     color: var(--secondary);
-    /* Uses global --secondary */
 }
 
 .controls {
@@ -33,7 +31,6 @@
 .modeToggle {
     display: flex;
     background: var(--muted);
-    /* Uses global --muted */
     padding: 0.25rem;
     border-radius: 999px;
     gap: 0.25rem;
@@ -44,10 +41,9 @@
     border-radius: 999px;
     border: none;
     background: transparent;
-    color: var(--secondary);
+    color: var(--primary);
     font-weight: 600;
     font-size: 0.95rem;
-    /* Explicit font size for consistency between button/label */
     cursor: pointer;
     transition: all 0.2s;
     display: inline-flex;
