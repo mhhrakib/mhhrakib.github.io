@@ -18,7 +18,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const GA_MEASUREMENT_ID = 'G-MEASUREMENT_ID'; // Replace with your actual ID
+  const GA_MEASUREMENT_ID = 'G-CKM6SYBMXN'; // Replace with your actual ID
 
   return (
     <html lang="en">
