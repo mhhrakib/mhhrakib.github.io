@@ -1,0 +1,118 @@
+.card {
+    background: var(--bg-card, #ffffff);
+    border: 1px solid var(--border-color, #e2e8f0);
+    border-radius: 8px;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.surahInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.surahNumber {
+    background: var(--bg-secondary, #e2e8f0);
+    color: var(--text-secondary, #4a5568);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.names {
+    display: flex;
+    flex-direction: column;
+}
+
+.englishName {
+    font-weight: 600;
+    color: var(--text-primary, #1a202c);
+}
+
+.arabicName {
+    font-family: 'Amiri', serif;
+    /* Ensure arabic font is available or fallback */
+    color: var(--primary-color, #0d7a5f);
+    font-size: 1.1rem;
+}
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    cursor: pointer;
+    accent-color: var(--primary-color, #0d7a5f);
+}
+
+.progressBarContainer {
+    height: 8px;
+    background: var(--bg-secondary, #e2e8f0);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    margin-bottom: 0.75rem;
+}
+
+.segment {
+    height: 100%;
+}
+
+.segmentCompleted {
+    background: var(--primary-color, #0d7a5f);
+}
+
+.segmentEmpty {
+    background: transparent;
+}
+
+.inputGroup {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color, #cbd5e0);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    background: var(--bg-input, #fff);
+    color: var(--text-primary, #1a202c);
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--primary-color, #0d7a5f);
+    box-shadow: 0 0 0 2px rgba(13, 122, 95, 0.1);
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    background: var(--bg-secondary, #edf2f7);
+    color: var(--text-secondary, #718096);
+}

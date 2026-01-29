@@ -1,0 +1,83 @@
+.statsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.statCard {
+    background: var(--bg-card, #ffffff);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid var(--border-color, #e2e8f0);
+}
+
+.progressCircle {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+}
+
+.progressSvg {
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+
+.progressBg {
+    fill: none;
+    stroke: var(--bg-secondary, #e2e8f0);
+    stroke-width: 8;
+}
+
+.progressFore {
+    fill: none;
+    stroke: var(--primary-color, #0d7a5f);
+    stroke-width: 8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s ease;
+}
+
+.progressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progressPercent {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-primary, #1a202c);
+}
+
+.progressLabel {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #718096);
+}
+
+.statDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.detailItem {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #718096);
+}
+
+.detailValue {
+    font-weight: 600;
+    color: var(--text-primary, #1a202c);
+}
