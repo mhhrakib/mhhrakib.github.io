@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import styles from './QuranCalculator.module.css';
 import { useQuranData } from '../../hooks/useQuranData';
 import { useQuranProgress } from '../../hooks/useQuranProgress';
+import { HelpSection } from './HelpSection';
 import { StatsOverview } from './StatsOverview';
 import { SurahCard } from './SurahCard';
 import { ProgressMode } from './types';
@@ -43,6 +44,7 @@ export const QuranCalculator: React.FC = () => {
                 </div>
             </div>
 
+            <HelpSection />
             <StatsOverview stats={stats} />
 
             <div className={styles.surahGrid}>

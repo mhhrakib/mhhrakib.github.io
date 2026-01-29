@@ -3,11 +3,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 import portfolioData from '@/data/portfolio.json';
 import styles from './Header.module.css';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const pathname = usePathname();
+
+    if (pathname?.startsWith('/quran-memorization-calculator')) {
+        return null;
+    }
 
     const navItems = [
         { name: 'About', path: '/' },
