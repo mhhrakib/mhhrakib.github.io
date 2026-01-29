@@ -26,21 +26,22 @@ export const parseAyahInput = (input: string, totalVerses: number): Set<number> 
 };
 
 // Calculate words and characters for a specific Surah based on completed verses
+// Calculate words and characters for a specific Surah based on completed verses
 export const getSurahStats = (surah: any, completedAyahs: Set<number>) => {
     let completedWords = 0;
     let completedChars = 0;
     let totalWords = 0;
     let totalChars = 0;
 
-    surah.verses.forEach((verse: any) => {
-        const text = verse.text;
-        const words = text.split(/\s+/).length;
-        const chars = text.replace(/\s+/g, '').length;
+    surah.verses.forEach((verseStats: [number, number], index: number) => {
+        const verseId = index + 1;
+        const words = verseStats[0];
+        const chars = verseStats[1];
 
         totalWords += words;
         totalChars += chars;
 
-        if (completedAyahs.has(verse.id)) {
+        if (completedAyahs.has(verseId)) {
             completedWords += words;
             completedChars += chars;
         }

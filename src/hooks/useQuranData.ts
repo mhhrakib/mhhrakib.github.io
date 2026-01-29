@@ -24,7 +24,7 @@ export const useQuranData = (): UseQuranDataResult => {
         }
 
         if (!fetchPromise) {
-            fetchPromise = fetch('/quran-simple.json')
+            fetchPromise = fetch('/quran-optimized.json')
                 .then((res) => {
                     if (!res.ok) throw new Error('Failed to load Quran data');
                     return res.json();

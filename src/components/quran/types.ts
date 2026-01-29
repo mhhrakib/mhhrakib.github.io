@@ -1,15 +1,13 @@
-export interface Verse {
-    id: number;
-    text: string;
-}
+// [words, chars]
+export type VerseStats = [number, number];
 
 export interface Surah {
     id: number;
     name: string;
     transliteration: string;
-    type: 'meccan' | 'medinan';
+    translation: string;
     total_verses: number;
-    verses: Verse[];
+    verses: VerseStats[];
 }
 
 export type QuranData = Surah[];
