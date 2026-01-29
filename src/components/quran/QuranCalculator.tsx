@@ -8,6 +8,7 @@ import { HelpSection } from './HelpSection';
 import { StatsOverview } from './StatsOverview';
 import { SurahCard } from './SurahCard';
 import { ProgressMode } from './types';
+import { ArrowUp } from 'lucide-react';
 
 type SortOption = 'default' | 'progress-desc' | 'progress-asc';
 
@@ -17,6 +18,20 @@ export const QuranCalculator: React.FC = () => {
     const [mode, setMode] = useState<ProgressMode>('memorization');
     const [searchQuery, setSearchQuery] = useState('');
     const [sortBy, setSortBy] = useState<SortOption>('default');
+    const [showScrollTop, setShowScrollTop] = useState(false);
+
+    // Scroll detection
+    React.useEffect(() => {
+        const handleScroll = () => {
+            setShowScrollTop(window.scrollY > 300);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
 
     if (loading) return <div className={styles.loading}>Loading Quran Data...</div>;
     if (error) return <div className={styles.error}>Error: {error}</div>;
@@ -151,6 +166,14 @@ export const QuranCalculator: React.FC = () => {
                     />
                 ))}
             </div>
+
+            <button
+                className={`${styles.scrollTopButton} ${showScrollTop ? styles.visible : ''}`}
+                onClick={scrollToTop}
+                aria-label="Scroll to top"
+            >
+                <ArrowUp size={24} />
+            </button>
         </div>
     );
 };
