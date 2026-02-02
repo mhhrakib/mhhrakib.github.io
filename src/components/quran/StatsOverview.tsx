@@ -93,11 +93,11 @@ export const StatsOverview: React.FC<StatsOverviewProps> = ({ stats }) => {
             />
 
             <CircularProgress
-                label="Chars"
+                label="Letters"
                 percentage={stats.chars}
                 current={(stats.chars / 100) * 330709}
                 total={330709} // Total chars constant from original app
-                unit="chars"
+                unit="letters"
             />
         </div>
     );

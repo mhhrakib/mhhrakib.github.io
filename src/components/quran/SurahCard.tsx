@@ -82,7 +82,7 @@ export const SurahCard: React.FC<SurahCardProps> = ({ surah, progressValue, onUp
                 <div className={styles.controls}>
                     <span
                         className={styles.badge}
-                        title="Based on avg of words & chars, so this % might differ from ayah count %."
+                        title="Based on avg of words & letters, so this % might differ from ayah count %."
                         style={{ cursor: 'help' }}
                     >
                         {Math.round(percent)}%

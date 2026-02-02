@@ -66,7 +66,10 @@ export const HelpSection: React.FC = () => {
                             <div className={styles.section}>
                                 <h4 className={styles.sectionTitle}>Stats Calculation</h4>
                                 <p>
-                                    Stats are precise! We count the actual <strong>words and characters</strong> of the verses you complete, not just the verse count.
+                                    Stats are precise! We count the actual <strong>words and letters</strong> of the verses you complete, not just the verse count.
+                                </p>
+                                <p className={styles.textSm} style={{ marginTop: '0.5rem', color: 'var(--secondary)' }}>
+                                    <strong>Formula:</strong> The overall percentage is an average of your Word Completion % and Letter Completion %. This gives a more accurate representation of volume than just counting verses (since some verses are much longer than others).
                                 </p>
                             </div>
 
