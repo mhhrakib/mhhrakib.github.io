@@ -46,7 +46,20 @@
     /* Slate 100 */
     --btn-primary-text: #0f172a;
     /* Slate 900 */
+
+    /* Quran App Specific Overrides for easy maintenance */
+    --quran-primary: #34d399;
+    /* Light Green */
+    --quran-track-bg: rgba(255, 255, 255, 0.1);
   }
+}
+
+/* Global Quran Variables (Light Mode defaults) */
+:root {
+  --quran-primary: #0d7a5f;
+  /* Deep Green */
+  --quran-track-bg: #f1f5f9;
+  /* Slate 100 */
 }
 
 * {
