@@ -6,10 +6,26 @@ import Footer from '@/components/Footer';
 import portfolioData from '@/data/portfolio.json';
 
 export const metadata: Metadata = {
-  title: `${portfolioData.personal.name} - ${portfolioData.personal.title}`,
+  metadataBase: new URL('https://hrakib.me'),
+  title: {
+    default: `${portfolioData.personal.name} - ${portfolioData.personal.title}`,
+    template: `%s | ${portfolioData.personal.name}`,
+  },
   description: `Academic and professional portfolio of ${portfolioData.personal.name}`,
   icons: {
     icon: '/favicon.ico',
+  },
+  openGraph: {
+    title: `${portfolioData.personal.name}`,
+    description: `Academic and professional portfolio of ${portfolioData.personal.name}`,
+    url: 'https://hrakib.me',
+    siteName: `${portfolioData.personal.name}`,
+    locale: 'en_US',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
