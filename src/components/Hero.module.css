@@ -53,6 +53,7 @@
 
 .primary:hover {
     background-color: var(--accent);
+    color: #ffffff !important;
 }
 
 .secondary {

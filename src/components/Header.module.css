@@ -27,6 +27,24 @@
     font-size: 1.25rem;
     color: var(--primary);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.initialsAvatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: var(--quran-primary);
+    /* Deep Green */
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
 .desktopNav {
